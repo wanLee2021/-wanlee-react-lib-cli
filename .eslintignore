@@ -4,3 +4,5 @@ package.json
 *.d.ts
 .eslintrc.js
 tsconfig.json
+commitlint.config.js
+vite.config.ts

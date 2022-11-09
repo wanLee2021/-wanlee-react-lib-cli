@@ -4,6 +4,9 @@ import react from '@vitejs/plugin-react';
 import typescript from '@rollup/plugin-typescript';
 import viteEslint from 'vite-plugin-eslint';
 import StylelintPlugin from 'vite-plugin-stylelint';
+import autoprefixer from 'autoprefixer';
+// @ts-ignore
+import { name } from './package.json'
 
 function resolve(str: string) {
   return path.resolve(__dirname, str);
@@ -32,7 +35,26 @@ export default defineConfig({
       }
     }
   },
-
+  css: {
+    postcss: {
+      plugins: [
+        autoprefixer({
+          overrideBrowserslist: ['Chrome > 40', 'ff > 31', 'ie 11']
+        })
+      ]
+    },
+    modules: {
+      generateScopedName: `${name}_[name]__[local]___[hash:base64:5]`
+    },
+    preprocessorOptions: {
+      scss: {
+      },
+      // 适配 antd
+      // less: {
+      //   javascriptEnabled: true
+      // }
+    }
+  },
   plugins: [
     react(),
     viteEslint(),
