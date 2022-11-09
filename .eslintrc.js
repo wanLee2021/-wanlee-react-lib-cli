@@ -1,3 +1,4 @@
+/* eslint-disable */
 module.exports = {
   env: {
     browser: true,
@@ -28,7 +29,7 @@ module.exports = {
   },
   settings: {
     react: {
-      "version": "detect"
+      version: 'detect'
     }
   }
 };
