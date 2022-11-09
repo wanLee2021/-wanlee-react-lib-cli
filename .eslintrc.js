@@ -5,12 +5,12 @@ module.exports = {
     es2021: true
   },
   extends: [
-    'eslint:recommended',
-    'plugin:react/recommended',
     'plugin:@typescript-eslint/recommended',
     // 1. 接入 prettier 的规则
     'prettier',
-    'plugin:prettier/recommended'
+    'plugin:prettier/recommended',
+    'eslint:recommended',
+    'plugin:react/recommended'
   ],
   overrides: [],
   parser: '@typescript-eslint/parser',

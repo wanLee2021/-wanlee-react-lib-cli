@@ -41,7 +41,12 @@ export default defineConfig({
       // 对某些文件排除检查
       fix: true,
       quiet: true,
-      emitWarningAsError: true
+      include: [
+        'src/**/*.css',
+        'src/**/*.scss',
+        'lib/**/*.css',
+        'lib/**/*.scss'
+      ]
     }),
     typescript({
       target: 'es5',

@@ -1,5 +1,5 @@
 {
-  "name": "lib-tpl",
+  "name": "@wanlee/react-lib-cli",
   "version": "0.0.2",
   "scripts": {
     "dev": "vite",
@@ -14,7 +14,7 @@
       "npm run lint:script",
       "git add ."
     ],
-    "src/**/*.{scss}": [
+    "src/**/*.{scss,css}": [
       "npm run lint:style",
       "git add ."
     ]
